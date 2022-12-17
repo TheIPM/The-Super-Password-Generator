@@ -6,25 +6,29 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 var numbers = [0,1,2,3,4,5,6,7,8,9]
 var special = ["!","@","#","$","%","^","&","*","(",")","-","_","+","=","{","[","}","]", ",", "<", ".", ">", "/", "?", ":", ";", "'", "|"]
 
-var passwordLength;
-var uppercaseLetters;
-var lowercaseLetters;
-var numbers;
-var specialCharacters;
+var length
+
 
 console.log(capital,lower,numbers,special)
 
-function passwordQuestions() {
-  resetApp();
-  passwordLength = prompt('How long would you like your password to be? Choose a number between 8 - 128.');
-  uppercaseLetters = confirm('Would you like uppercase letters?');
-  lowercaseLetters = confirm('Would you like lowercase letters?');
-  numbers = confirm('Would you like numbers?');
-  specialCharacters = confirm('Would you like special characters?');
+function questions () {
+  prompt("Choose a number between 8 - 128.");
+  capital = confirm("You want capital letters?");
+  lower = confirm("You want lower case letters?");
+  numbers = confirm("You want numbers?");
+  special = confirm("You want special characters?");
+
+  if (length < 8 || length > 120 || length == null) {
+    alert("Password needs to be between 8 and 128 characters.");
+    questions();
+  }
 }
+
+console.log(questions)
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
