@@ -17,6 +17,7 @@ var special1;
 console.log(capital,lower,numbers,special)
 
 function questions () {
+  reset();
   length = prompt("Choose a number between 8 - 128.");
   capital1 = confirm("You want capital letters?");
   lower1 = confirm("You want lower case letters?");
@@ -33,7 +34,15 @@ function questions () {
     questions();
   }
 
-  return questions;
+  var choices = {
+    length: length,
+    capital1: capital1,
+    lower1: lower1,
+    numbers1: numbers1,
+    special1: special1}
+  
+
+  return choices;
 }
 
 console.log(questions)
@@ -52,33 +61,42 @@ function writePassword() {
 
 
 
-function makePassword() {
-  var = questions();
+function generatePassword() { 
+  var choices = questions();
 
-  if (capital) {
-    pChar = pChar.concat(capital)
+  if (choices.capital1) {
+    pChar = pChar.concat(capital);
   }
 
-  if (lower) {
-    pChar = pChar.concat(lower)
+  if (choices.lower1) {
+    pChar = pChar.concat(lower);
   }
 
-  if (numbers) {
-    pChar = pChar.concat(numbers)
+  if (choices.numbers1) {
+    pChar = pChar.concat(numbers);
   }
 
-  if (special) {
-    pChar = pChar.concat(special)
+  if (choices.special1) {
+    pChar = pChar.concat(special);
   }
+  var password = "";
+
+  for (var i = 0; i < choices.length; i++) {
+      var randomChar = pChar[Math.floor(Math.random() * pChar.length)];
+      password = password + randomChar;
+  }
+  
+  return password;
 }
 
-  function randomP();
-  var randomP = "";
-  for (var i = 0; i < l; ++i) {
-    var randomP += pChar(Math.floor(Math.random() * pChar.length));  
-    return randomP;
+function reset() {
+  pChar = [];
+  length;
+  capital1;
+  lower1;
+  numbers1;
+  special1;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
