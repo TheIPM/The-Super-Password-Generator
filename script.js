@@ -49,12 +49,36 @@ function writePassword() {
 
 }
 
+
+
+
 function makePassword() {
   var = questions();
+
+  if (capital) {
+    pChar = pChar.concat(capital)
+  }
+
+  if (lower) {
+    pChar = pChar.concat(lower)
+  }
+
+  if (numbers) {
+    pChar = pChar.concat(numbers)
+  }
+
+  if (special) {
+    pChar = pChar.concat(special)
+  }
+}
+
+  function randomP();
+  var randomP = "";
   for (var i = 0; i < l; ++i) {
-    var password += characters.charAt(Math.floor(Math.random() * characters.length));
+    var randomP += pChar(Math.floor(Math.random() * pChar.length));  
+    return randomP;
 }
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
