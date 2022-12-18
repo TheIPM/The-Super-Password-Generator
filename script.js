@@ -8,7 +8,7 @@ var special = ["!","@","#","$","%","^","&","*","(",")","-","_","+","=","{","[","
 
 var password= []; 
 var length;
-var upper1;
+var capital1;
 var lower1;
 var numbers1;
 var special1;
@@ -18,17 +18,17 @@ console.log(capital,lower,numbers,special)
 
 function questions () {
   length = prompt("Choose a number between 8 - 128.");
-  capital = confirm("You want capital letters?");
-  lower = confirm("You want lower case letters?");
-  numbers = confirm("You want numbers?");
-  special = confirm("You want special characters?");
+  capital1 = confirm("You want capital letters?");
+  lower1 = confirm("You want lower case letters?");
+  numbers1 = confirm("You want numbers?");
+  special1 = confirm("You want special characters?");
 
   if (length < 8 || length > 120 || length == null) {
     alert("Password needs to be between 8 and 128 characters.");
     questions();
   }
 
-  if (!capital && !lower && !numbers && !special) {
+  if (!capital1 && !lower1 && !numbers1 && !special1) {
     alert("Need at least one type of character.");
     questions();
   }
