@@ -65,19 +65,19 @@ function generatePassword() {
   var choices = questions();
 
   if (choices.capital1) {
-    pChar = pChar.concat(capital);
+    pChar = pChar.concat(capital)
   }
 
   if (choices.lower1) {
-    pChar = pChar.concat(lower);
+    pChar = pChar.concat(lower)
   }
 
   if (choices.numbers1) {
-    pChar = pChar.concat(numbers);
+    pChar = pChar.concat(numbers)
   }
 
   if (choices.special1) {
-    pChar = pChar.concat(special);
+    pChar = pChar.concat(special)
   }
   var password = "";
 
