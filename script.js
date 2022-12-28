@@ -20,7 +20,7 @@ function questions () {
   reset();
   length = prompt("Choose a number between 8 - 128.");
   if (length === null) {
-    return; //break out of the function early
+    return;
 }
   capital1 = confirm("You want capital letters?");
   lower1 = confirm("You want lower case letters?");
@@ -28,12 +28,12 @@ function questions () {
   special1 = confirm("You want special characters?");
 
   if (length < 8 || length > 128 || length == null) {
-    alert("Password needs to be between 8 and 128 characters.");
+    alert("Password needs to be between 8 and 128 characters says The Password Generator.");
     questions();
   }
 
   if (!capital1 && !lower1 && !numbers1 && !special1) {
-    alert("Need at least one type of character.");
+    alert("Need at least one type of character says The Password Generator.");
     questions();
   }
 

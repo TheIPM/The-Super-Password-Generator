@@ -20,7 +20,9 @@ N/A
 
 ## Usage
 
-When using this password generator all you would have to do is press the generate password button and follow the prompts that appear on screen. The first instruction
+When using this password generator all you would have to do is press the generate password button and follow the prompts that appear on screen. The first instruction that appears on screen is to enter how long you want the password to be, and if you hit cancel it cancels the process.
+
+Following that there is a series of questions that ask what you want the password to consist of and at least ONE of these boxes needs to be confirmed otherwise the Super Password Generator will prevent the creation of the password. 
 
 ![image of logo](./assets/images/Screenshot%20of%20logo.png)
 
