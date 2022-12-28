@@ -19,12 +19,15 @@ console.log(capital,lower,numbers,special)
 function questions () {
   reset();
   length = prompt("Choose a number between 8 - 128.");
+  if (length === null) {
+    return; //break out of the function early
+}
   capital1 = confirm("You want capital letters?");
   lower1 = confirm("You want lower case letters?");
   numbers1 = confirm("You want numbers?");
   special1 = confirm("You want special characters?");
 
-  if (length < 8 || length > 120 || length == null) {
+  if (length < 8 || length > 128 || length == null) {
     alert("Password needs to be between 8 and 128 characters.");
     questions();
   }
